@@ -22,13 +22,13 @@ const CHANNEL_VERSION_BROTLI: u8 = 1;
 #[derive(Debug)]
 pub struct BatchReader {
     /// The raw data to decode.
-    data: Option<Vec<u8>>,
+    pub data: Option<Vec<u8>>,
     /// Decompressed data.
-    decompressed: Vec<u8>,
+    pub decompressed: Vec<u8>,
     /// The current cursor in the `decompressed` data.
-    cursor: usize,
+    pub cursor: usize,
     /// The maximum RLP bytes per channel.
-    max_rlp_bytes_per_channel: usize,
+    pub max_rlp_bytes_per_channel: usize,
 }
 
 impl BatchReader {
